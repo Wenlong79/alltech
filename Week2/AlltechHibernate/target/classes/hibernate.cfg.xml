@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!--        Database connection-->
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/demo?useSSL=false&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=Asia/Shanghai&amp;allowPublicKeyRetrieval=true</property>
+
+        <!--        <property name="connection.url">jdbc:mysql://localhost:3306/AllTech?useSSL=false&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=Asia/Shanghai&amp;allowPublicKeyRetrieval=true</property>-->
+
+        <property name="connection.username">root</property>
+        <property name="connection.password">YwlHigher01</property>
+
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!--        <property name="hbm2ddl.auto">update</property>-->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <!--        This will create a table if necessary-->
+        <!--        <property name="Hibernate.hbm2ddl.auto">create</property>-->
+
+        <property name="show_sql">true</property>
+
+        <!--        use XML-based mapping metadata-->
+        <!--        <mapping resource="mappers/Book.hbm.xml"/>-->
+
+        <!--        use Annotation-based mapping metadata-->
+        <mapping class="com.wl.entity.Book"/>
+        <mapping class="com.wl.entity.Guide"/>
+        <mapping class="com.wl.entity.Student"/>
+        <mapping class="com.wl.entity.Person"/>
+        <mapping class="com.wl.entity.Employee"/>
+        <mapping class="com.wl.entity.Friend"/>
+        <mapping class="com.wl.entity.Actor"/>
+        <mapping class="com.wl.entity.Movie"/>
+        <mapping class="com.wl.entity2.Department"/>
+        <mapping class="com.wl.entity2.Worker"/>
+
+    </session-factory>
+</hibernate-configuration>
