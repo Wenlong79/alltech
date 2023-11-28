@@ -1,0 +1,34 @@
+<!-- <p>create-book works!</p> -->
+<div class="col-md-6 offset-md-3">
+  <h3>Create Book</h3>
+  <form (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label>Author</label>
+      <input type="text" class="form-control" id="bookAuthor" [(ngModel)]="book.bookAuthor" name="bookAuthor">
+    </div>
+
+    <div class="form-group">
+      <label>Category</label>
+      <input type="text" class="form-control" id="bookCategory" [(ngModel)]="book.bookCategory" name="bookCategory">
+    </div>
+
+    <div class="form-group">
+      <label>Book Name</label>
+      <input type="text" class="form-control" id="bookName" [(ngModel)]="book.bookName" name="bookName">
+    </div>
+
+    <div class="form-group">
+      <label>Price</label>
+      <input type="text" class="form-control" id="bookPrice" [(ngModel)]="book.bookPrice" name="bookPrice">
+    </div>
+
+    <div class="form-group">
+      <label>Quantity</label>
+      <input type="text" class="form-control" id="bookQuantity" [(ngModel)]="book.bookQuantity" name="bookQuantity">
+    </div>
+
+    <button class="btn btn-success" type="submit">Add</button>
+
+  </form>
+</div>
